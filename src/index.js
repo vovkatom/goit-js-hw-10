@@ -21,9 +21,9 @@ refs.catCard.style.display = 'none';
 
 // Відображення анімованих крапок завантаження за допомогою Notiflix
 Loading.dots({
-  svgColor: '#5897fb',
-  svgSize: '130px',
-  messageFontSize: '30px',
+  svgColor: 'black',
+  svgSize: '80px',
+  messageFontSize: '80px',
 });
 
 // Запит на отримання списку порід котів та обробка результату
@@ -65,9 +65,9 @@ refs.select.addEventListener('change', e => {
 
   // Відображення анімованих крапок завантаження за допомогою Notiflix
   Loading.dots({
-    svgColor: '#5897fb',
-    svgSize: '130px',
-    messageFontSize: '30px',
+    svgColor: 'black',
+    svgSize: '80px',
+    messageFontSize: '80px',
   });
 
   // Запит на отримання інформації про кота за обраною породою
