@@ -28,7 +28,6 @@ function fetchCatByBreed(breedId) {
   const params = new URLSearchParams({
     breed_ids: breedId,
   });
-  
   return axios.get(`${IMAGES_URL}?${params}`).then(res => {
     if (res.status !== 200) {
       throw new Error(res.status);

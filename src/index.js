@@ -79,6 +79,9 @@ refs.select.addEventListener('change', e => {
     })
     .catch(err => {
       // Відображення повідомлення про помилку за допомогою Notiflix
+      refs.loader.style.display = 'none';
+      refs.select.style.display = 'none';
+      refs.catCard.style.display = 'none';
       Notify.failure(refs.err.textContent);
     })
     .finally(result => Loading.remove());
@@ -90,14 +93,13 @@ function createMarkupCards(data) {
     breeds: { name, description, temperament },
     url,
   } = data;
-
+  
   const card = ` 
-      <img class="cat-img" src="${url}" alt="${name}"  >
+      <img class="cat-img" src="${url}" alt="${data.breeds[0].name}"  >
       <div class="cat-right">
-      <h1 class="name">${name}</h1>
-      <p class="description">${description}</p>
-      <p class="temperament"><span class="temperament-span">Темперамент:</span> ${temperament}</p>    
+      <h1 class="name">${data.breeds[0].name}</h1>
+      <p class="description">${data.breeds[0].description}</p>
+      <p class="temperament"><span class="temperament-span">Темперамент:</span> ${data.breeds[0].temperament}</p>    
       </div>`;
-
   refs.catCard.innerHTML = card;
 }
