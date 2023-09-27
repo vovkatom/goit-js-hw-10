@@ -99,7 +99,7 @@ function createMarkupCards(data) {
       <div class="cat-right">
       <h1 class="name">${data.breeds[0].name}</h1>
       <p class="description">${data.breeds[0].description}</p>
-      <p class="temperament"><span class="temperament-span">Темперамент:</span> ${data.breeds[0].temperament}</p>    
+      <p class="temperament"><span class="temperament-span">Temperament:</span> ${data.breeds[0].temperament}</p>    
       </div>`;
   refs.catCard.innerHTML = card;
 }
